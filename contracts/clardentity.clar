@@ -25,3 +25,12 @@
     (string-ascii 50)
     principal
 )
+
+;; Read Only Functions
+(define-read-only (get-profile (user principal))
+    (map-get? profiles user)
+)
+
+(define-read-only (resolve-handle (handle (string-ascii 50)))
+    (map-get? identities handle)
+)
