@@ -55,3 +55,23 @@
         (ok true)
     )
 )
+
+(define-public (update-metadata (new-metadata-url (string-utf8 256)))
+    (let
+        (
+            (profile (unwrap! (get-profile tx-sender) err-not-found))
+        )
+        (map-set profiles tx-sender (merge profile { metadata-url: new-metadata-url }))
+        (ok true)
+    )
+)
+
+(define-public (set-active (active bool))
+    (let
+        (
+            (profile (unwrap! (get-profile tx-sender) err-not-found))
+        )
+        (map-set profiles tx-sender (merge profile { active: active }))
+        (ok true)
+    )
+)
