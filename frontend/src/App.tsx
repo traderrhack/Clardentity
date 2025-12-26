@@ -1,4 +1,6 @@
 import { ConnectWallet } from './components/ConnectWallet';
+import { Hero } from './components/Hero';
+import { Footer } from './components/Footer';
 import './App.css';
 
 function App() {
@@ -9,8 +11,12 @@ function App() {
         <ConnectWallet />
       </header>
       <main>
-        <p>Welcome to Clardentity</p>
+        <Hero />
+        <section className='content'>
+          <p>Secure identity on Stacks.</p>
+        </section>
       </main>
+      <Footer />
     </div>
   );
 }
