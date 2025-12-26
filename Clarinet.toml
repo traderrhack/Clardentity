@@ -8,7 +8,7 @@ requirements = []
 [contracts.clardentity]
 path = 'contracts/clardentity.clar'
 clarity_version = 4
-epoch = 3.3
+epoch = "3.3"
 [repl.analysis]
 passes = ['check_checker']
 
